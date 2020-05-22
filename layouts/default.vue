@@ -8,13 +8,13 @@
 				v-row( justify="center" no-gutters )
 					v-btn.my-2( v-for="route in routes" :key="route.text" color="white" text rounded nuxt :to="{ name: route.name }" ) {{ route.text }}
 					v-col.primary.darken-1.py-4.text-center.white--text( cols="12" ) {{ new Date().getFullYear() }} -
-						| Minden jog fenntartva <b>Controlép Kft</b> - <i>Alaptól építünk! </i>
+						| Minden jog fenntartva <b>Controlép Kft</b> - <i>Alaptól építünk! </i> 
 
 
 </template>
 
 <script>
-import Navbar from "~/components/Navbar";
+import Navbar from "~/components/Navbar/Index.vue";
 import routes from "~/config/routes";
 export default {
 	components: {

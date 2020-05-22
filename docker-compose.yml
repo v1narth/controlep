@@ -4,8 +4,10 @@ services:
     nuxt:
         build: .
         container_name: nuxt
+        working_dir: /usr/src/nuxt-app
         command: npm run dev
-
+        volumes:
+            - ./:/usr/src/nuxt-app
         ports:
             - 3000:3000
         environment:
