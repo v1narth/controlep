@@ -94,7 +94,7 @@ export default {
 @keyframes logo {
 	0% {
 		opacity: 0;
-		transform: translateY(60px);
+		transform: translateY(-5px);
 	}
 	100% {
 		opacity: 1;

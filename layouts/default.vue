@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Navbar from "~/components/Navbar/Index.vue";
+import Navbar from "~/components/Navbar";
 import routes from "~/config/routes";
 export default {
 	components: {

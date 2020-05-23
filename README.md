@@ -1,22 +1,22 @@
 # ControlEp
 
-> My sublime Nuxt.js project
+> Improved website design & funcionality for  https://controlep.hu
 
 ## Build Setup
 
-```bash
-# install dependencies
-$ yarn install
+Create `.env` file to define environment variables.
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+``` sh
+# .env 
 
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
+NUXT_HOST=0.0.0.0
+NUXT_PORT=3000
 ```
+---
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## 
+
+``` sh
+# Start docker environment
+$ docker-compose up -d
+```
