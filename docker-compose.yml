@@ -12,3 +12,11 @@ services:
             - ${NUXT_PORT}:3000
         environment:
             HOST: ${NUXT_HOST}
+
+    yarn:
+        build: .
+        container_name: yarn
+        working_dir: /usr/src/nuxt-app
+        volumes:
+            - ./:/usr/src/nuxt-app
+        entrypoint: ["yarn"]

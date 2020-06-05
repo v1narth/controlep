@@ -1,59 +1,64 @@
 <template lang="pug">
-    div.Navbar
-        div.Navbar__wrapper
-            div.Navbar__logo 
-                Logo
-            div.Navbar__items
-                nuxt-link.Navbar__item( :to="{ name: 'index' }" )
-                    //- i.fas.fa-home.mr-2 
-                    | Fooldal
+	div.Navbar
+		div.Navbar__wrapper
+			div.Navbar__logo 
+				Logo
+			div.Navbar__items
+				nuxt-link.Navbar__item( :to="{ name: 'index' }" )
+					//- i.fas.fa-home.mr-2 
+					| Fooldal
 
-                nuxt-link.Navbar__item( :to="{ name: 'szolgaltatasaink' }" ) 
-                    //- i.fas.fa-concierge-bell.mr-2 
-                    | Szolgaltatasaink
+				nuxt-link.Navbar__item( :to="{ name: 'szolgaltatasaink' }" ) 
+					//- i.fas.fa-concierge-bell.mr-2 
+					| Szolgaltatasaink
 
-                nuxt-link.Navbar__item( :to="{ name: 'referenciak' }" ) 
-                    //- i.fas.fa-images.mr-2
-                    | Referenciak
+				nuxt-link.Navbar__item( :to="{ name: 'referenciak' }" ) 
+					//- i.fas.fa-images.mr-2
+					| Referenciak
 
-                nuxt-link.Navbar__item( :to="{ name: 'partnereink' }" )
-                    //- i.fas.fa-handshake.mr-2 
-                    | Partnereink
-                nuxt-link.Navbar__item( :to="{ name: 'aktualis' }" ) 
-                    //- i.fas.fa-newspaper.mr-2
-                    | Aktualis
+				nuxt-link.Navbar__item( :to="{ name: 'partnereink' }" )
+					//- i.fas.fa-handshake.mr-2 
+					| Partnereink
 
-                v-btn.white--text.ml-5( color="primary" @click.stop="dialog = true" ) 
-                    i.fas.fa-id-badge.mr-2 
-                    | Kapcsolat
+				nuxt-link.Navbar__item( :to="{ name: 'aktualis' }" ) 
+					//- i.fas.fa-newspaper.mr-2
+					| Aktualis
 
-        v-dialog.Navbar__dialog( v-model="dialog" max-width="500" )
-            v-card( tile )
-                v-card-title.mb-4 Kapcsolat
-                //- v-separate
-                v-card-subtitle 
-                    b Cégadatok
-                v-card-text 
-                    div ControlÉp Kft
-                    div 1136 Budapest; Pannónia utca 30. 1/4.
-                    div Cégjegyzékszám: 01-09-949737
-                    div Adószám: 23031401-2-41
+				nuxt-link.Navbar__item( :to="{ name: 'rolunk' }" ) 
+					//- i.fas.fa-newspaper.mr-2
+					| Rolunk
 
-                v-spacer
+				v-btn.white--text.ml-5( color="primary"  @click.stop="dialog = true" ) 
+					i.fas.fa-id-badge.mr-2 
+					| Kapcsolat
 
-                v-card-subtitle 
-                    b Elérhetőségeink
-                v-card-text
-                    div Hajnal Gábor
-                    div Ügyvezető
-                    div Tel: <a href="tel:+3630 514 1574" ref="call"> +3630 514 1574 </a> 
-                    div E-mail: <a href="mailto:info@controlep.hu"> info@controlep.hu </a>; <a href="mailto:controlep@gmail.com"> controlep@gmail.com </a>
+		v-dialog.Navbar__dialog( v-model="dialog" max-width="500" )
+			v-card( tile )
+				v-card-title.mb-4 Kapcsolat
+				//- v-separate
+				v-card-subtitle 
+					b Cégadatok
+				v-card-text 
+					div ControlÉp Kft
+					div 1136 Budapest; Pannónia utca 30. 1/4.
+					div Cégjegyzékszám: 01-09-949737
+					div Adószám: 23031401-2-41
 
-                v-card-actions
-                    v-spacer
-                    v-btn( color="primary" text @click.prevent="$refs.call.click()" )
-                        i.fas.fa-phone.mr-2
-                        | Hivja most!
+				v-spacer
+
+				v-card-subtitle 
+					b Elérhetőségeink
+				v-card-text
+					div Hajnal Gábor
+					div Ügyvezető
+					div Tel: <a href="tel:+3630 514 1574" ref="call"> +3630 514 1574 </a> 
+					div E-mail: <a href="mailto:info@controlep.hu"> info@controlep.hu </a>; <a href="mailto:controlep@gmail.com"> controlep@gmail.com </a>
+
+				v-card-actions
+					v-spacer
+					v-btn( color="primary" text @click.prevent="$refs.call.click()" )
+						i.fas.fa-phone.mr-2
+						| Hivja most!
 </template>
 
 <script>

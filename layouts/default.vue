@@ -31,8 +31,28 @@ a {
 	text-decoration: none;
 	color: initial;
 }
+// html,
+// body {
+// 	outline: 0 !important;
+
+// 	&:active,
+// 	&:focus {
+// 		outline: 0 !important;
+// 	}
+// }
 .page {
 	min-height: calc(100vh - 70px);
+}
+
+.headline {
+	&--small {
+		font-size: 28px;
+		color: #676767;
+		font-weight: 200;
+	}
+	&--uppercase {
+		font-variant-caps: all-petite-caps;
+	}
 }
 
 /* Enter and leave animations can use different */
@@ -46,6 +66,19 @@ a {
 .fade-enter,
 .fade-leave-to {
 	transform: translateY(-10px);
+	opacity: 0;
+}
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.opacity-enter-active {
+	transition: all 0.4s ease;
+}
+.opacity-leave-active {
+	transition: all 0.4s ease;
+}
+.opacity-enter,
+.opacity-leave-to {
 	opacity: 0;
 }
 </style>
